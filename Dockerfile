@@ -1,5 +1,5 @@
-# Use Alpine as base --added by e6
-FROM alpine:3.10
+# Use Alpine as base
+FROM alpine:edge
 
 # Maintainer
 LABEL maintainer="andreas@lacework.net"
