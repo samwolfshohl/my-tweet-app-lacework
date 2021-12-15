@@ -1,4 +1,4 @@
-name: GitHub Actions Demo - Accenture
+name: GitHub Actions Demo - GAP
 on:
   push:
     branches: [ master ]
