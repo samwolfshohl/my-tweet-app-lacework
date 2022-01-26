@@ -1,4 +1,4 @@
-name: GitHub Actions Demo - 20220126 - Fail on Critical / High
+name: GitHub Actions Demo - 20220126 - Pass on Critical / High
 on:
   push:
     branches: [ master ]
@@ -35,8 +35,8 @@ jobs:
              image_name: securethecloud/my-tweet-app-lacework
              image_tag: ${{ env.GHA_SHA }}
              fail_only_if_vulnerabilities_fixable: false
-             fail_if_critical_vulnerabilities_found: true
-             fail_if_high_vulnerabilities_found: true
+             fail_if_critical_vulnerabilities_found: false
+             fail_if_high_vulnerabilities_found: false
              fail_if_medium_vulnerabilities_found: false
              fail_if_low_vulnerabilities_found: false
              fail_if_info_vulnerabilities_found: false
