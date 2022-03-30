@@ -1,13 +1,13 @@
 #
-# my-tweet-app-lacework-GKE	
+# my-tweet-app-lacework	
 #
-Docker demo example application launched into GKE
+Docker demo example application launched into AWS
 
 ![Picture of the example application](https://github.com/automatecloud/my-tweet-app-lacework/blob/master/Pictures/picturenew.png?raw=true)
 
 ## For what is this repository?
 
-This application was designed to show how easy it is to integrate Lacework Vulnerability Scanner with Visual Studio Code and GitHub Actions and fully auto manage the deployment of the application inside a GCP GKE Kubernetes cluster.
+This application was designed to show how easy it is to integrate Lacework Vulnerability Scanner with Visual Studio Code and GitHub Actions and fully auto manage the deployment of the application inside a AWS EKSKubernetes cluster.
 
 It is using a simple Docker container image based on Alpine, Python and Flask as componentes that have some critical and medium vulnerabilities.
 
@@ -17,8 +17,8 @@ To be able to use it you must have:
 
 1. A Github account that you can use to fork this repository.
 2. Installation of Visual Studio Code on your local machine (we only tested the integration with Visual Studio Code on macOS).
-3. A GKE Kubernetes cluster
-4. Your GKE access key that is allowed to manage the GKE cluster.
+3. A AKS Kubernetes cluster
+4. Your AKS access key that is allowed to manage the AKS cluster.
 5. A Lacework instance and an inline scanner token that can be used for the security scan.
 6. A DockerHub account that can be used to save your images build via Github Actions.
 
@@ -37,9 +37,9 @@ To show the integration with Visual Studio Code we created a simple [tasks.json]
 
 It is important to use the right Task, as you otherwise might see some diffs between your local image scan and the scan of the Github Actions.
 
-### Create an GKE cluster for your runtime.
+### Create an AKS cluster for your runtime.
 
-Before you can use the full Github Actions deployment you need to create an GKE cluster, so we can deploy the application to. 
+Before you can use the full Github Actions deployment you need to create an AKS cluster, so we can deploy the application to. 
 
 ### DockerHub account
 
@@ -57,6 +57,6 @@ cat $HOME/.kube/config | base64
 
 * DOCKERHUB_USERNAME: Your Dockerhub Username
 * DOCKERHUB_TOKEN: Your Dockerhub access token
-* GKE_PROJECT: Google Cloud project ID
-* GKE_SA_KEY: the content of the service account JSON file
+* AWS_ACCESS_KEY_ID: Your AWS Access Key ID that is allowed to use the EKS cluster.
+* AWS_SECRET_ACCESS_KEY: Your AWS Secret Access Key that is allowed to use the EKS cluster.
 
