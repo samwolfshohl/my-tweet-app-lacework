@@ -33,5 +33,5 @@ jobs:
              SAVE_RESULTS_IN_LACEWORK: true
              SAVE_BUILD_REPORT: true
              BUILD_REPORT_FILE_NAME: lwreport.html
-       	     SCAN_LIBRARY_PACKAGES: true
+             SCAN_LIBRARY_PACKAGES: true
          
