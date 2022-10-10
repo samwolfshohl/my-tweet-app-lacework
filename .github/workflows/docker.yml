@@ -1,4 +1,4 @@
-name: GitHub Actions Test1 - 20221010 - Pass on Critical / High
+name: GitHub Actions Test - 20221010 - Pass on Critical / High
 on:
   push:
     branches: [ master ]
